@@ -10,8 +10,7 @@
     "type:check": "tsc --noEmit",
     "analyze": "env ANALYZE=true pnpm build",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx}\"",
-    "types": "tsc",
-    "prepare": "husky install"
+    "types": "tsc"
   },
   "browserslist": [
     ">0.3%",
