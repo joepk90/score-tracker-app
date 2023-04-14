@@ -1,9 +1,9 @@
-import { slideStyles } from 'components/slideshow'
+// import { slideStyles } from 'components/slideshow'
 import Image from 'next/image'
 
-export function SlideThree() {
+const SlideThree = () => {
   return (
-    <div css={slideStyles}>
+    <div>
       <div className="content">
         <Image
           priority={true}
@@ -20,3 +20,5 @@ export function SlideThree() {
     </div>
   )
 }
+
+export default SlideThree
