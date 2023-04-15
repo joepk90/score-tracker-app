@@ -33,10 +33,10 @@ const MainContent = () => {
 
   return (
     <>
+      <ShellTitle title="Settings" />
       <Paper>
-        <ShellTitle title="Settings" />
-        <Box p={2}>
-          <Box m={2} pt={2} pb={2}>
+        <Box m={2} pt={2} pb={2}>
+          <Box m={2}>
             <Typography variant="h6">Settings</Typography>
           </Box>
           <List>
