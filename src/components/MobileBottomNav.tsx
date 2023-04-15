@@ -1,4 +1,4 @@
-import SearchIcon from '@mui/icons-material/Search'
+import AnalyticsIcon from '@mui/icons-material/Analytics'
 import AccountBoxIcon from '@mui/icons-material/AccountBox'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
@@ -25,7 +25,7 @@ export function MobileBottomNav({ className = '' }: { className?: string }) {
     () => [
       {
         label: `Home`,
-        icon: <SearchIcon />,
+        icon: <AnalyticsIcon />,
         path: '/app'
       },
       { label: `Score`, icon: <AlbumIcon />, path: '/app/score' },
