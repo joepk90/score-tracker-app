@@ -85,7 +85,10 @@ export function AppShell({
         onOk={installPWA}
         show={showInstallPrompt}
       />
-      <DisplayModeNotification />
+      {/* TODO make utility function to check environment */}
+      {process.env.NEXT_PUBLIC_NODE_ENV === 'development' && (
+        <DisplayModeNotification />
+      )}
       <AppUpdatedNotification cookieName={cookies.showAppUpdated.name} />
       <Box style={{ opacity: state.showApp ? 1 : 0 }} sx={{ display: 'flex' }}>
         <AppToolbar />
