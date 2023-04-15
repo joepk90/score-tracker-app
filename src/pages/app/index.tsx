@@ -1,7 +1,8 @@
+import React from 'react'
 import { Box, Paper, Typography } from '@mui/material'
 import { ShellTitle } from 'components'
 import { AppLayout } from 'components/layout'
-
+import Chart from 'react-apexcharts'
 export default function AppIndex() {
   return (
     <>
@@ -11,7 +12,26 @@ export default function AppIndex() {
           <Box m={2}>
             <Typography variant="h6">Home</Typography>
           </Box>
-          <Typography>Add graph</Typography>
+          <Box m={2} display="flex" justifyContent="center">
+            <Chart
+              options={{
+                chart: {
+                  id: 'basic-bar'
+                },
+                xaxis: {
+                  categories: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+                }
+              }}
+              series={[
+                {
+                  name: 'series-1',
+                  data: [30, 40, 45, 50, 49, 60]
+                }
+              ]}
+              type="bar"
+              width="300"
+            />
+          </Box>
         </Box>
       </Paper>
     </>
