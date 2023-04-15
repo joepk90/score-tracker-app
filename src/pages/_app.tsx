@@ -42,7 +42,7 @@ export default function MyApp(props: MyAppProps) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="description"
-          content="Next.js PWA application made with material-ui"
+          content="Score tracking application designed to track daily scores and provide time based analytics on your past scores."
           key="description"
         />
         <meta

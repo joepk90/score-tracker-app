@@ -36,8 +36,13 @@ export default function Index() {
         }}
       >
         <h1 css={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: 0 }}>
-          Next.js Material PWA
+          Score Tracker App
         </h1>
+        <p css={{ textAlign: 'center' }}>
+          A score tracking application designed to track daily scores
+          <br />
+          and provide time based analytics on your past scores.
+        </p>
         <div
           css={{
             maxWidth: '300px',
