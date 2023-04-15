@@ -19,7 +19,7 @@ function getSelected(path: string, paths: string[]) {
 // TODO REMOVE DUPLICATION (src/components/sidebars/DefaultMenuItems.tsx)
 export function MobileBottomNav({ className = '' }: { className?: string }) {
   const router = useRouter()
-  const [selected, setSelected] = useState(-1)
+  const [selected, setSelected] = useState<number | null>(-1)
 
   const menuItems = useMemo(
     () => [
