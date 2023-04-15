@@ -2,11 +2,11 @@
   "theme_color": "#4a90e2",
   "background_color": "#4a90e2",
   "display": "standalone",
-  "id": "nextjs-material-pwa-base",
+  "id": "score-tracker-app",
   "start_url": "/app",
-  "name": "NextJS Material PWA Base",
-  "short_name": "NextJS MUI PWA Base",
-  "description": "Next.js PWA with Material Design base project",
+  "name": "Score Tracker Application",
+  "short_name": "Score Tracker App",
+  "description": "A score tracking application designed to track daily scores and provide time based analytics on your past scores.",
   "orientation": "any",
   "icons": [
     {
