@@ -7,7 +7,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 function getSelected(path: string, paths: string[]) {
   for (let i = 0; i < paths.length; i++) {
-    if (path.startsWith(paths[i])) {
+    if (path === paths[i]) {
       return i
     }
   }
