@@ -2,7 +2,9 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox'
 import Box from '@mui/material/Box'
 import Divider from '@mui/material/Divider'
 import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
 import ListItemIcon from '@mui/material/ListItemIcon'
+import ListItemText from '@mui/material/ListItemText'
 import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import { SettingsProfile, ShellTitle } from 'components'
@@ -10,17 +12,16 @@ import { AppLayout } from 'components/layout'
 import { MobileMenuItem } from 'components/sidebars'
 import { useRouter } from 'next/router'
 import { ReactNode } from 'react'
+import { Actions, useAppShell } from 'components/providers/AppShellProvider'
+import Hidden from '@mui/material/Hidden'
+import Switch from '@mui/material/Switch'
+import { ThemeSwitch } from 'components/ThemeSwitch'
 
 export default function Settings() {
   const router = useRouter()
 
   return (
     <>
-      <Paper>
-        <Box m={2} pt={2} pb={2}>
-          <Typography variant="h6">Settings</Typography>
-        </Box>
-      </Paper>
       {router.query.section === 'profile' ? (
         <SettingsProfile />
       ) : (
@@ -30,27 +31,56 @@ export default function Settings() {
   )
 }
 
-function MainContent() {
+const MainContent = () => {
+  const { state, dispatch } = useAppShell()
+
+  const toggleBottomNav = () => {
+    dispatch({
+      type: Actions.SHOW_BOTTOM_NAV,
+      payload: !state.showBottomNav
+    })
+  }
+  const toggleTheme = () => {
+    dispatch({
+      type: Actions.SET_THEME,
+      payload: state.theme === 'dark' ? 'light' : 'dark'
+    })
+  }
+
   return (
     <>
-      <ShellTitle title="Settings" />
       <Paper>
+        <ShellTitle title="Settings" />
         <Box p={2}>
-          <Typography paragraph>
-            Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-            ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-            elementum integer enim neque volutpat ac tincidunt. Ornare
-            suspendisse sed nisi lacus sed viverra tellus. Purus sit amet
-            volutpat consequat mauris. Elementum eu facilisis sed odio morbi.
-            Euismod lacinia at quis risus sed vulputate odio. Morbi tincidunt
-            ornare massa eget egestas purus viverra accumsan in. In hendrerit
-            gravida rutrum quisque non tellus orci ac. Pellentesque nec nam
-            aliquam sem et tortor. Habitant morbi tristique senectus et.
-            Adipiscing elit duis tristique sollicitudin nibh sit. Ornare aenean
-            euismod elementum nisi quis eleifend. Commodo viverra maecenas
-            accumsan lacus vel facilisis. Nulla posuerj sollicitudin aliquam
-            ultrices sagittis orci a. s sense)
-          </Typography>
+          <Box m={2} pt={2} pb={2}>
+            <Typography variant="h6">Settings</Typography>
+          </Box>
+          <List>
+            <ListItem>
+              <ListItemText
+                id="switch-list-label-nightode"
+                primary="Dark Mode"
+              />
+              <ThemeSwitch
+                checked={state.theme === 'dark'}
+                onChange={toggleTheme}
+              />
+            </ListItem>
+            <Hidden mdUp implementation="js">
+              <ListItem>
+                <ListItemText
+                  id="switch-list-label-bottom-nav"
+                  primary="Bottom Nav"
+                />
+                <Switch
+                  checked={state.showBottomNav}
+                  onChange={toggleBottomNav}
+                  name="checkedB"
+                  color="secondary"
+                />
+              </ListItem>
+            </Hidden>
+          </List>
         </Box>
       </Paper>
     </>
