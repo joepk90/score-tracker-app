@@ -7,8 +7,16 @@ const Score = () => {
   return (
     <>
       <ShellTitle title="Score" />
-      <Box m={2} pt={2} pb={2}>
-        <Box sx={{ height: '80vh' }} display="flex" justifyContent="center">
+      <Box
+        m={2}
+        pt={2}
+        pb={2}
+        sx={{ height: '85vh' }}
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Box sx={{ height: '70vh' }}>
           <Slider
             sx={{
               '& input[type="range"]': {
