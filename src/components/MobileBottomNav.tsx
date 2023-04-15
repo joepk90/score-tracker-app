@@ -1,5 +1,6 @@
 import SearchIcon from '@mui/icons-material/Search'
 import SettingsIcon from '@mui/icons-material/Settings'
+import AccountBoxIcon from '@mui/icons-material/AccountBox'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
 import { useRouter } from 'next/router'
@@ -15,6 +16,7 @@ function getSelected(path: string, paths: string[]) {
   return -1
 }
 
+// TODO REMOVE DUPLICATION (src/components/sidebars/DefaultMenuItems.tsx)
 export function MobileBottomNav({ className = '' }: { className?: string }) {
   const router = useRouter()
   const [selected, setSelected] = useState(-1)
@@ -26,6 +28,7 @@ export function MobileBottomNav({ className = '' }: { className?: string }) {
         icon: <SearchIcon />,
         path: '/app'
       },
+      { label: `Profile`, icon: <AccountBoxIcon />, path: '/app/profile' },
       { label: `Settings`, icon: <SettingsIcon />, path: '/app/settings' }
     ],
     []
