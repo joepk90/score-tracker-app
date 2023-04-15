@@ -78,8 +78,8 @@ const MainContent = () => {
           </Typography>
           <Typography component="p">
             Repository: {''}
-            <a href="https://github.com/joepk90/nextjs-material-pwa-base">
-              https://github.com/joepk90/nextjs-material-pwa-base
+            <a href="https://github.com/joepk90/score-tracker-app">
+              https://github.com/joepk90/score-tracker-app
             </a>
           </Typography>
         </Box>
