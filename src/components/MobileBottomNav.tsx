@@ -13,7 +13,7 @@ function getSelected(path: string, paths: string[]) {
     }
   }
 
-  return -1
+  return null
 }
 
 // TODO REMOVE DUPLICATION (src/components/sidebars/DefaultMenuItems.tsx)
