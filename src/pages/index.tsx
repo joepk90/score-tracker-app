@@ -55,16 +55,7 @@ export default function Index() {
             fontSize: '0.8rem',
             padding: '0 12px'
           }}
-        >
-          <p>
-            When you launch the app for the first time, there will be a simple
-            onboarding slideshow, that will only be shown once.
-          </p>
-          <p>
-            If you like to see the onboarding again, hold down the{' '}
-            <strong>ctrl/command</strong> when launching the app.
-          </p>
-        </div>
+        ></div>
         <a
           onClick={handleAppLaunch}
           css={{
