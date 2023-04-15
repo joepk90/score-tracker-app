@@ -88,8 +88,7 @@ export const MobileSidebar = memo(function MobileSidebar({
               left: 0,
               width: '100%',
               height: '100%',
-              background:
-                'linear-gradient(100deg, hsl(243deg 97% 46%) 0%, hsl(130deg 100% 50%) 100%)'
+              background: '#2E6DA8'
             }}
           ></Box>
           <Box
