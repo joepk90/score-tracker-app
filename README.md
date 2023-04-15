@@ -1,8 +1,6 @@
-# NextJS Material PWA Base
+# Score Tracker App
 
-NextJS base project using Material UI and PWA configuration.
-A simplified example based off the following project:
+A front end client to send and submit scores to the django-score-tracker app.
+
+The base project used to start this was:
 https://github.com/ivandotv/nextjs-material-pwa
-
-The PWA dependacy has been updated to match the configuration in the default NextJS examples:
-https://github.com/vercel/next.js/tree/canary/examples/progressive-web-app
