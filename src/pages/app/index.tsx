@@ -2,7 +2,8 @@ import React from 'react'
 import { Box, Paper, Typography } from '@mui/material'
 import { ShellTitle } from 'components'
 import { AppLayout } from 'components/layout'
-import Chart from 'react-apexcharts'
+import dynamic from 'next/dynamic'
+const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 export default function AppIndex() {
   return (
     <>
