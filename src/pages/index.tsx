@@ -1,19 +1,12 @@
 import { Global } from '@emotion/react'
-import { cookies } from 'lib/shared/config'
-import Cookies from 'js-cookie'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import React from 'react'
 
 export default function Index() {
   const router = useRouter()
-  const handleAppLaunch = (e: React.MouseEvent) => {
-    if (!Cookies.get(cookies.slideshowShown.name) || e.ctrlKey) {
-      Cookies.set(cookies.slideshowShown.name, '1')
-      router.push('/onboarding')
-    } else {
-      router.push('/app')
-    }
+  const handleAppLaunch = () => {
+    router.push('/app')
   }
 
   return (

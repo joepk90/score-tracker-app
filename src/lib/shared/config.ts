@@ -24,9 +24,6 @@ export const cookies = {
   },
   showAppUpdated: {
     name: 'show_app_updated'
-  },
-  slideshowShown: {
-    name: 'slideshow_shown'
   }
 }
 
