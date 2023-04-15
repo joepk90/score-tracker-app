@@ -20,7 +20,7 @@ const states = [
   }
 ]
 
-export function SettingsProfile() {
+const SettingsProfile = () => {
   return (
     <form autoComplete="off">
       <Card>
@@ -103,3 +103,5 @@ export function SettingsProfile() {
     </form>
   )
 }
+
+export default SettingsProfile
