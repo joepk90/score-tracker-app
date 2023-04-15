@@ -2,11 +2,11 @@
   "theme_color": "#4a90e2",
   "background_color": "#4a90e2",
   "display": "standalone",
-  "id": "material-pwa.vercel.app",
+  "id": "nextjs-material-pwa-base",
   "start_url": "/app",
-  "name": "Next.js PWA",
-  "short_name": "Next.js PWA",
-  "description": "Next.js PWA with Material Design demo",
+  "name": "NextJS Material PWA Base",
+  "short_name": "NextJS MUI PWA Base",
+  "description": "Next.js PWA with Material Design base project",
   "orientation": "any",
   "icons": [
     {
