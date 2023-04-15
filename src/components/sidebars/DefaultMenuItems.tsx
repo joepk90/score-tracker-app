@@ -2,8 +2,9 @@ import { AppMenuItem } from 'components/sidebars'
 import List from '@mui/material/List'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import AccountBoxIcon from '@mui/icons-material/AccountBox'
-import SearchIcon from '@mui/icons-material/Search'
+import AnalyticsIcon from '@mui/icons-material/Analytics'
 import SettingsIcon from '@mui/icons-material/Settings'
+import AlbumIcon from '@mui/icons-material/Album'
 
 // TODO REMOVE DUPLICATION (src/components/MobileBottomNav.tsx)
 export function DefaultMenuItems({
@@ -19,11 +20,22 @@ export function DefaultMenuItems({
           onClick={onClick}
           icon={
             <ListItemIcon>
-              <SearchIcon />
+              <AnalyticsIcon />
             </ListItemIcon>
           }
         >
           Home
+        </AppMenuItem>
+        <AppMenuItem
+          link={{ href: '/app/score' }}
+          onClick={onClick}
+          icon={
+            <ListItemIcon>
+              <AlbumIcon />
+            </ListItemIcon>
+          }
+        >
+          Score
         </AppMenuItem>
         <AppMenuItem
           link={{ href: '/app/profile' }}

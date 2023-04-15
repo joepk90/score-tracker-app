@@ -1,8 +1,8 @@
 import SearchIcon from '@mui/icons-material/Search'
-import SettingsIcon from '@mui/icons-material/Settings'
 import AccountBoxIcon from '@mui/icons-material/AccountBox'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
+import AlbumIcon from '@mui/icons-material/Album'
 import { useRouter } from 'next/router'
 import { useEffect, useMemo, useState } from 'react'
 
@@ -28,8 +28,8 @@ export function MobileBottomNav({ className = '' }: { className?: string }) {
         icon: <SearchIcon />,
         path: '/app'
       },
-      { label: `Profile`, icon: <AccountBoxIcon />, path: '/app/profile' },
-      { label: `Settings`, icon: <SettingsIcon />, path: '/app/settings' }
+      { label: `Score`, icon: <AlbumIcon />, path: '/app/score' },
+      { label: `Profile`, icon: <AccountBoxIcon />, path: '/app/profile' }
     ],
     []
   )
