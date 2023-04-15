@@ -11,21 +11,7 @@ export default function AppIndex() {
           <Box m={2}>
             <Typography variant="h6">Home</Typography>
           </Box>
-          <Box m={2}>
-            <Typography component="p">App version: {__VERSION__}</Typography>
-            <Typography component="p">Commit sha: {__COMMIT_SHA__}</Typography>
-            <Typography component="p">Build date: {__BUILD_DATE__}</Typography>
-            <Typography component="p">Branch: {__BRANCH__}</Typography>
-            <Typography component="p">
-              Commit Message: {__COMMIT_MESSAGE__}
-            </Typography>
-            <Typography component="p">
-              Repository: {''}
-              <a href="https://github.com/joepk90/nextjs-material-pwa-base">
-                https://github.com/joepk90/nextjs-material-pwa-base
-              </a>
-            </Typography>
-          </Box>
+          <Typography>Add graph</Typography>
         </Box>
       </Paper>
     </>
