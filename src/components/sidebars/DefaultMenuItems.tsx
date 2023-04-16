@@ -1,10 +1,12 @@
 import { AppMenuItem } from 'components/sidebars'
+import Box from '@mui/material/Box'
 import List from '@mui/material/List'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import AccountBoxIcon from '@mui/icons-material/AccountBox'
 import AnalyticsIcon from '@mui/icons-material/Analytics'
 import SettingsIcon from '@mui/icons-material/Settings'
 import AlbumIcon from '@mui/icons-material/Album'
+import Login from 'components/Login'
 
 type DefaultMenuItemsProps = {
   onClick?: () => void
@@ -13,7 +15,12 @@ type DefaultMenuItemsProps = {
 // TODO REMOVE DUPLICATION (src/components/MobileBottomNav.tsx)
 const DefaultMenuItems = ({ onClick }: DefaultMenuItemsProps) => {
   return (
-    <>
+    <Box
+      sx={{ height: '100%' }}
+      display="flex"
+      flexDirection="column"
+      justifyContent="space-between"
+    >
       <List>
         <AppMenuItem
           link={{ href: '/app' }}
@@ -60,7 +67,10 @@ const DefaultMenuItems = ({ onClick }: DefaultMenuItemsProps) => {
           Settings
         </AppMenuItem>
       </List>
-    </>
+      <List>
+        <Login />
+      </List>
+    </Box>
   )
 }
 

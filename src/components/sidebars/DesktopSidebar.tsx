@@ -23,7 +23,7 @@ export const DesktopSidebar = memo(function DesktopSidebar({
   const menuItems = sidebar ? (
     sidebar(defaultItems)
   ) : (
-    <List>{defaultItems}</List>
+    <List sx={{ height: '100%' }}>{defaultItems}</List>
   )
 
   return (

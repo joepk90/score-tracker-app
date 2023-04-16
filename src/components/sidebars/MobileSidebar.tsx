@@ -44,7 +44,7 @@ export const MobileSidebar = memo(function MobileSidebar({
   const menuItems = sidebar ? (
     sidebar(defaultItems)
   ) : (
-    <List>{defaultItems}</List>
+    <List sx={{ height: '100%' }}>{defaultItems}</List>
   )
 
   return (
