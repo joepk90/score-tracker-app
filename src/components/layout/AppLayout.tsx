@@ -2,7 +2,6 @@ import { AppShell } from 'components/layout'
 import { AppShellProvider } from 'components/providers/AppShellProvider'
 import { NextApplicationPage } from 'pages/_app'
 import { store } from 'store/store'
-import { auth } from 'store/auth'
 import { Provider } from 'react-redux'
 
 export function AppLayout(Component: NextApplicationPage, props: any) {
