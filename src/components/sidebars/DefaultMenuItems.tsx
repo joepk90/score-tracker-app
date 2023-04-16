@@ -5,6 +5,7 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox'
 import AnalyticsIcon from '@mui/icons-material/Analytics'
 import SettingsIcon from '@mui/icons-material/Settings'
 import AlbumIcon from '@mui/icons-material/Album'
+import Login from 'components/Login'
 
 type DefaultMenuItemsProps = {
   onClick?: () => void
@@ -59,6 +60,7 @@ const DefaultMenuItems = ({ onClick }: DefaultMenuItemsProps) => {
         >
           Settings
         </AppMenuItem>
+        <Login />
       </List>
     </>
   )
