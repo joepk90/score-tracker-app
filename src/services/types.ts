@@ -1,6 +1,15 @@
-export type ScoreCreateResult = {}
+type Tokens = {
+  access: string
+  refresh: string
+}
+export type ScoreCreateResult = {
+  date: Date
+  number: number
+  tokens?: Tokens
+  uuid: string
+}
 export type ScoreQueryArgs = {
-  id: number
+  number: number
 }
 
 export type AuthResult = {}
