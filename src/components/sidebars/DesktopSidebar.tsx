@@ -4,7 +4,7 @@ import List from '@mui/material/List'
 import { useTheme } from '@mui/material/styles'
 import { styled } from '@mui/system'
 import { useAppShell } from 'components/providers/AppShellProvider'
-import { DefaultMenuItems } from 'components/sidebars'
+import DefaultMenuItems from 'components/sidebars/DefaultMenuItems'
 import { NextApplicationPage } from 'pages/_app'
 import { memo } from 'react'
 
@@ -23,7 +23,7 @@ export const DesktopSidebar = memo(function DesktopSidebar({
   const menuItems = sidebar ? (
     sidebar(defaultItems)
   ) : (
-    <List>{defaultItems}</List>
+    <List sx={{ height: '100%' }}>{defaultItems}</List>
   )
 
   return (

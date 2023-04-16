@@ -37,8 +37,10 @@ yarn-error.log*
 
 # local env files
 .env.local
+.env.development
 .env.development.local
 .env.test.local
+.env.production
 .env.production.local
 
 # vercel
@@ -46,3 +48,6 @@ yarn-error.log*
 
 # pnpm store
 .pnpm-store
+
+# custom
+notes.txt
