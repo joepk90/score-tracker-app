@@ -68,7 +68,7 @@ const DefaultMenuItems = ({ onClick }: DefaultMenuItemsProps) => {
         </AppMenuItem>
       </List>
       <List>
-        <Login />
+        <Login onClick={onClick} />
       </List>
     </Box>
   )
