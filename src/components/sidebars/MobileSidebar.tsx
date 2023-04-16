@@ -3,7 +3,7 @@ import Avatar from '@mui/material/Avatar'
 import Card from '@mui/material/Card'
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 import { Actions, useAppShell } from 'components/providers/AppShellProvider'
-import { DefaultMenuItems } from 'components/sidebars'
+import DefaultMenuItems from 'components/sidebars/DefaultMenuItems'
 import { NextApplicationPage } from 'pages/_app'
 import { memo, useCallback, useEffect } from 'react'
 

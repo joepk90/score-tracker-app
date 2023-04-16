@@ -6,12 +6,12 @@ import AnalyticsIcon from '@mui/icons-material/Analytics'
 import SettingsIcon from '@mui/icons-material/Settings'
 import AlbumIcon from '@mui/icons-material/Album'
 
+type DefaultMenuItemsProps = {
+  onClick?: () => void
+}
+
 // TODO REMOVE DUPLICATION (src/components/MobileBottomNav.tsx)
-export function DefaultMenuItems({
-  onClick
-}: {
-  onClick?: (...args: any[]) => void
-}) {
+const DefaultMenuItems = ({ onClick }: DefaultMenuItemsProps) => {
   return (
     <>
       <List>
@@ -63,3 +63,5 @@ export function DefaultMenuItems({
     </>
   )
 }
+
+export default DefaultMenuItems
